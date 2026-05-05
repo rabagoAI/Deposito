@@ -19,6 +19,8 @@ export default function Hero() {
         loop
         muted
         playsInline
+        disablePictureInPicture
+        style={{ pointerEvents: 'none' }}
       />
       <div className="absolute inset-0 bg-black/40" />
       <div className="absolute bottom-0 w-full h-64 bg-gradient-to-t from-black to-transparent z-10" />
@@ -62,7 +64,8 @@ export default function Hero() {
         >
           <input
             type="date"
-            className="bg-transparent text-white/60 text-sm px-4 outline-none flex-1"
+            className="bg-transparent text-white/60 text-sm px-4 outline-none flex-1 cursor-pointer"
+            onClick={(e) => (e.currentTarget as HTMLInputElement).showPicker?.()}
           />
           <div className="w-px h-5 bg-white/20 shrink-0" />
           <input

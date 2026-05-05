@@ -23,14 +23,14 @@
     -moz-osx-font-smoothing: grayscale;
   }
 
-  /* Quitar estilos nativos del input date */
-  input[type='date']::-webkit-calendar-picker-indicator {
-    display: none;
-  }
-
   input[type='date'] {
     -webkit-appearance: none;
     appearance: none;
+  }
+
+  input[type='date']::-webkit-calendar-picker-indicator {
+    filter: invert(1) opacity(0.4);
+    cursor: pointer;
   }
 }
 
